@@ -1,0 +1,4 @@
+jdbcUrl = jdbc:mysql://localhost/carstore
+user = root
+password = password
+devMode = true
