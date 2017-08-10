@@ -25,6 +25,8 @@ public class DemoConfig extends JFinalConfig {
     public void configConstant(Constants constants) {
         PropKit.use("a_little_config.txt");
         constants.setDevMode(PropKit.getBoolean("devMode",false));
+
+        //使用viewType.jsp渲染的话，好像没有办法使用公共网页模板引擎
         constants.setViewType(ViewType.JSP);
 
     }
@@ -41,6 +43,10 @@ public class DemoConfig extends JFinalConfig {
     @Override
     public void configEngine(Engine engine) {
         //目前这个加载一些网页模板的功能还不是很会用
+
+        engine.addSharedFunction("/WEB-INF/jsp/common/_paginate.html");
+        engine.addSharedFunction("/WEB-INF/jsp/common/_testPage.html");
+
     }
 
     @Override

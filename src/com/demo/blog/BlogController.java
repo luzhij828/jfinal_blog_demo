@@ -41,8 +41,4 @@ public class BlogController extends Controller {
         service.deleteByID(getParaToInt());
         redirect("/blog");
     }
-
-
-
-
 }

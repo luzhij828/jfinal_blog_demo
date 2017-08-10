@@ -1,6 +1,5 @@
 package com.demo.blog;
 
-
 import com.demo.common.mode.User;
 import com.jfinal.aop.Interceptor;
 import com.jfinal.aop.Invocation;
@@ -20,4 +19,5 @@ public class BlogInterceptor implements Interceptor{
             controller.redirect("/user");
         }
     }
+
 }

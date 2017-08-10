@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
 #define paginate(currentPage, totalPage, link)
+
 	#if(totalPage <= 0 || currentPage > totalPage) #return #end
 	#setLocal(startPage = currentPage - 4)
 	#if (startPage < 1) #setLocal(startPage = 1) #end

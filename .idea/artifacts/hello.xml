@@ -2,7 +2,7 @@
   <artifact type="war" name="hello">
     <output-path>$PROJECT_DIR$/out/artifacts/hello</output-path>
     <root id="archive" name="hello.war">
-      <element id="dir-copy" path="$PROJECT_DIR$/web" />
+      <element id="artifact" artifact-name="HelloWeb:war exploded" />
     </root>
   </artifact>
 </component>
