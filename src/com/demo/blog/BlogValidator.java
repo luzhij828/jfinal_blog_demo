@@ -19,7 +19,8 @@ public class BlogValidator extends Validator {
     protected void handleError(Controller controller) {
         controller.keepModel(Blog.class);
         String actionKey = getActionKey();
-        if (actionKey.equals("/blog/seve")){
+        System.out.println("actionKey  "+actionKey);
+        if (actionKey.equals("/blog/save")){
             controller.render("/WEB-INF/jsp/blog/addUI.jsp");
         }else if (actionKey.equals("/blog/update")){
             controller.render("/WEB-INF/jsp/blog/editUI.jsp");

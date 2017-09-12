@@ -1,7 +1,9 @@
 package com.demo.user;
 
 import com.alibaba.fastjson.JSONObject;
+import com.demo.blog.BlogInterceptor;
 import com.demo.common.mode.User;
+import com.jfinal.aop.Before;
 import com.jfinal.core.Controller;
 
 import java.util.List;
@@ -52,11 +54,12 @@ public class UserController extends Controller {
         json.put("msg", msg);
         renderJson(json);
     }
+    @Before(BlogInterceptor.class)
     public void viewUI(){
         setAttr("user",userService.findById(getParaToInt()));
         render("/WEB-INF/jsp/user/viewUI.jsp");
     }
-
+    @Before(BlogInterceptor.class)
     public  void  update(){
         List<User> users = userService.findByName2(getParaToInt("user.uid"),getPara("user.username"));
         boolean flag = true;

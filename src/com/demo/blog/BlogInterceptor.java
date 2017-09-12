@@ -9,6 +9,7 @@ import com.jfinal.core.Controller;
  * Created by luzhijie on 2017/8/4.
  */
 public class BlogInterceptor implements Interceptor{
+
     @Override
     public void intercept(Invocation invocation) {
         Controller controller = invocation.getController();

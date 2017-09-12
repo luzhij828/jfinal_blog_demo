@@ -19,6 +19,7 @@ public class BlogController extends Controller {
         render("/WEB-INF/jsp/blog/addUI.jsp");
     }
 
+    @Before(BlogValidator.class)
     public void  save(){
 
         getModel(Blog.class).save();
